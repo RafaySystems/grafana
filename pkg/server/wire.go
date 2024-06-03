@@ -400,6 +400,9 @@ var wireSet = wire.NewSet(
 	prefimpl.ProvideService,
 	oauthtoken.ProvideService,
 	wire.Bind(new(oauthtoken.OAuthTokenService), new(*oauthtoken.Service)),
+
+	// RO Repl
+	sqlstore.ProvideReadOnlyService,
 )
 
 var wireCLISet = wire.NewSet(
@@ -422,6 +425,7 @@ var wireTestSet = wire.NewSet(
 	ProvideTestEnv,
 	metrics.WireSetForTest,
 	sqlstore.ProvideServiceForTests,
+	sqlstore.ProvideReadOnlyService,
 	ngmetrics.ProvideServiceForTest,
 	notifications.MockNotificationService,
 	wire.Bind(new(notifications.Service), new(*notifications.NotificationServiceMock)),
