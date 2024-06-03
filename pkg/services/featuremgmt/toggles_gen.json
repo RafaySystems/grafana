@@ -1016,7 +1016,8 @@
       "metadata": {
         "name": "lokiFormatQuery",
         "resourceVersion": "1716448665531",
-        "creationTimestamp": "2024-05-23T07:17:45Z"
+        "creationTimestamp": "2024-05-23T07:17:45Z",
+        "deletionTimestamp": "2024-06-03T15:21:23Z"
       },
       "spec": {
         "description": "Enables the ability to format Loki queries",
